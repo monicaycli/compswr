@@ -15,7 +15,7 @@ export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK    #<= cpus-per-task
 
 #Define user paths
 NETID=$USER
-PROJECT=COMPSWR
+PROJECT=MyProject
 
 export DIR_BASE=/scratch/${NETID}/${PROJECT}
 export DIR_DATA=${DIR_BASE}/data             #rw
