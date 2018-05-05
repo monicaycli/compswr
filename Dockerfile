@@ -8,6 +8,8 @@ RUN mkdir -p /bind/data && \
   mkdir -p /bind/scripts && \
   mkdir -p /bind/work
 
+# Install python packages
+RUN pip install --upgrade pip
 RUN pip install librosa
 
 # Configuration
