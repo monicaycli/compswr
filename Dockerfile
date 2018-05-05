@@ -4,9 +4,9 @@ LABEL maintainer="Monica Li <monica.li@uconn.edu>"
 
 # Directories
 ## binds
-RUN mkdir /bind/data && \
-  mkdir /bind/scripts && \
-  mkdir /bind/work
+RUN mkdir -p /bind/data && \
+  mkdir -p /bind/scripts && \
+  mkdir -p /bind/work
 
 RUN pip install librosa
 
