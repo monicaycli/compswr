@@ -4,9 +4,9 @@ LABEL maintainer="Monica Li <monica.li@uconn.edu>"
 
 # Directories
 ## binds
-RUN mkdir -p /bind/data && \
-  mkdir -p /bind/scripts && \
-  mkdir -p /bind/work
+RUN mkdir -p /bind/data_in && \
+  mkdir -p /bind/data_out && \
+  mkdir -p /bind/scripts
 
 # Install python packages
 RUN pip install --upgrade pip
