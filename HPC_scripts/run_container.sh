@@ -15,5 +15,4 @@ singularity run \
 --bind ${DIR_DATAIN}:/bind/data_in \
 --bind ${DIR_DATAOUT}:/bind/data_out \
 --bind ${DIR_SCRIPTS}:/bind/scripts \
---bind ${DIR_WORK}:/bind/work \
-$IMG_PATH "$@"
+--nv $IMG_PATH "$@"
