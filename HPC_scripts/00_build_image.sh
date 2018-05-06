@@ -24,5 +24,5 @@ if [ ! -d /scratch/$USER/containers/ ]; then
   mkdir -p /scratch/$USER/containers
 fi
 cd /scratch/$USER/containers
-singularity create --size 4000 compswr.img
-singularity import compswr.img --nv docker://monicaycli/compswr:latest
+singularity create --size 4000 compswr_tf170gpu.img
+singularity import compswr_tf170gpu.img --nv docker://monicaycli/compswr:tf170gpu
