@@ -7,8 +7,6 @@
 #SBATCH -e error_%A_%a.log                 # Standard error
 #SBATCH -o output_%A_%a.log                # Standard output
 #SBATCH --job-name=MyJob                   # Descriptive job name
-#SBATCH --partition=gpu
-#SBATCH --gres=gpu:1                       # Request a GPU; max is 2
 
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK    #<= cpus-per-task
 ##### END OF JOB DEFINITION  #####
@@ -24,7 +22,6 @@ export DIR_SCRIPTS=${DIR_BASE}/scripts       #prepended to PATH
 
 # Load modules
 module load singularity/2.3.1-gcc  #required to run the container
-modual load cuda/9.1
 
 # finally call the container with any arguments for the job
 # run_container.sh will bind the appropriate paths
