@@ -12,7 +12,8 @@ IMG_PATH=/scratch/yil14028/containers/compswr.img
 #IMG_PATH=/scratch/$USER/containers/compswr.img
 
 singularity run \
---bind ${DIR_DATA}:/bind/data \
+--bind ${DIR_DATAIN}:/bind/data_in \
+--bind ${DIR_DATAOUT}:/bind/data_out \
 --bind ${DIR_SCRIPTS}:/bind/scripts \
 --bind ${DIR_WORK}:/bind/work \
 $IMG_PATH "$@"

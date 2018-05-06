@@ -18,9 +18,9 @@ NETID=$USER
 PROJECT=MyProject
 
 export DIR_BASE=/scratch/${NETID}/${PROJECT}
-export DIR_DATA=${DIR_BASE}/data             #rw
-export DIR_SCRIPTS=${DIR_BASE}/scripts       #ro, prepended to PATH
-export DIR_WORK=/work                        #rw /work on HPC is 40Gb local storage
+export DIR_DATAIN=${DIR_BASE}/data_in
+export DIR_DATAOUT=${DIR_BASE}/data_out
+export DIR_SCRIPTS=${DIR_BASE}/scripts       #prepended to PATH
 
 # Load modules
 module load singularity/2.3.1-gcc  #required to run the container
