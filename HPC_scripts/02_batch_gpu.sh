@@ -27,6 +27,7 @@ module load singularity/2.3.1-gcc  #required to run the container
 modual load cuda/9.1
 
 # finally call the container with any arguments for the job
+# the arguments have to be accessible from inside the container
 # run_container.sh will bind the appropriate paths
 # environment variables are passed to the container
 
