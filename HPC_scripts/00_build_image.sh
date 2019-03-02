@@ -13,12 +13,12 @@ export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK      #<= cpus-per-task
 ##### END OF JOB DEFINITION  #####
 
 # Load modules
-module load singularity/2.3.1-gcc
+module load singularity/2.6
 
 # build singularity image from docker image online
 if [ ! -d /scratch/$USER/containers/ ]; then
   mkdir -p /scratch/$USER/containers
 fi
 cd /scratch/$USER/containers
-singularity create --size 4000 compswr_tf170cpu.img
-singularity import compswr_tf170cpu.img docker://monicaycli/compswr:tf170cpu
+
+singularity build compswr_tf170cpu.img docker://monicaycli/compswr:tf170cpu

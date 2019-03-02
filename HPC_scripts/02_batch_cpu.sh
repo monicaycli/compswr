@@ -21,7 +21,7 @@ export DIR_DATAOUT=${DIR_BASE}/data_out
 export DIR_SCRIPTS=${DIR_BASE}/scripts       #prepended to PATH
 
 # Load modules
-module load singularity/2.3.1-gcc  #required to run the container
+module load singularity/2.6  #required to run the container
 
 # finally call the container with any arguments for the job
 # the arguments have to be accessible from inside the container
