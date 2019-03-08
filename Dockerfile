@@ -4,7 +4,10 @@ LABEL maintainer="Monica Li <monica.li@uconn.edu>"
 
 # Install python packages
 RUN pip install --upgrade pip
-RUN pip install librosa
+RUN pip uninstall numpy --yes
+RUN pip install -I numpy==1.16.2
+RUN pip install -I librosa==0.6.3
+RUN pip install -I matplotlib==3.0.3
 RUN apt-get update && \
       apt-get install -y python3-tk && \
       apt-get clean
