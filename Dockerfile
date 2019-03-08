@@ -13,9 +13,8 @@ RUN apt-get update -qq && \
       apt-get clean
 
 # Configuration
-# bash prompt
-RUN cat /etc/bash.bashrc | sed -e "s/PS1=.*/PS1='\${debian_chroot:+(\$debian_chroot)}\\\u@\\\h \\\[\\\e[1;36m\\\](COMPSWR)\\\[\\\e[m\\\] \\\w\\\\$ '/" > /tmp/tmp.bashrc && \
-mv /tmp/tmp.bashrc /etc/bash.bashrc
+## bashrc
+COPY bashrc /bashrc
 
 ## singularity directories
 RUN mkdir /share && \
