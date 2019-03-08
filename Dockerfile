@@ -5,6 +5,9 @@ LABEL maintainer="Monica Li <monica.li@uconn.edu>"
 # Install python packages
 RUN pip install --upgrade pip
 RUN pip install librosa
+RUN apt-get update && \
+      apt-get install -y python3-tk && \
+      apt-get clean
 
 # Configuration
 # bash prompt
