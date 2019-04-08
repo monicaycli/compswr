@@ -1,4 +1,4 @@
-FROM tensorflow/tensorflow:1.7.0-gpu-py3
+FROM tensorflow/tensorflow:1.13.1-gpu-py3
 
 LABEL maintainer="Monica Li <monica.li@uconn.edu>"
 
